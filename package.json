@@ -1,0 +1,24 @@
+{
+  "name": "fam-trilnis-snake-in-webgl10-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-debug": "tsc -p tsconfig.debug.json",
+    "compile-release": "tsc -p tsconfig.release.json",
+    "bundle-release": "browserify public/js/Program.js -o public/js/bundle.js",
+    "uglify-release": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
+    "build-release": "npm run compile-release && npm run bundle-release && npm run uglify-release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gl-matrix": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/gl-matrix": "^2.4.5",
+    "@types/requirejs": "^2.1.31"
+  }
+}
